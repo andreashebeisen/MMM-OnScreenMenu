@@ -129,6 +129,15 @@ Module.register("MMM-OnScreenMenu", {
                 this.clickByNumber(payload);
             }
         }
+        if (notification === "ONSCREENMENU_UP") {
+            this.selectMenuItem(-1);
+        }
+        if (notification === "ONSCREENMENU_DOWN") {
+            this.selectMenuItem();
+        }
+        if (notification === "ONSCREENMENU_SELECT") {            
+            this.doMenuActionCB();
+        }
     },
 
     /********** ON SCREEN MENU FUNCTIONS **********/
